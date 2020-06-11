@@ -2,20 +2,11 @@
 
 ---
 
-# PAYPAL - Change client-id in index.html to use the app
+# Paypal
+Change client-id in index.html to use the app
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+```<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP"
+			data-sdk-integration-source="button-factory"></script>```
 
 
 ## Get started
@@ -23,14 +14,14 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
-npm install
+cd paypal-demo
+yarn install
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
@@ -43,10 +34,10 @@ By default, the server will only respond to requests from localhost. To allow co
 To create an optimised version of the app:
 
 ```bash
-npm run build
+yarn build
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+You can run the newly built app with `yarn start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
 
 ## Single-page app mode
@@ -67,7 +58,7 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 Install `now` if you haven't already:
 
 ```bash
-npm install -g now
+yarn add now
 ```
 
 Then, from within your project folder:
@@ -84,12 +75,12 @@ As an alternative, use the [Now desktop client](https://zeit.co/download) and si
 Install `surge` if you haven't already:
 
 ```bash
-npm install -g surge
+yarn add surge
 ```
 
 Then, from within your project folder:
 
 ```bash
-npm run build
+yarn build
 surge public my-project.surge.sh
 ```
